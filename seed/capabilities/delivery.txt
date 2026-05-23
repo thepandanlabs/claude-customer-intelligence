@@ -1,0 +1,40 @@
+Meridian Systems — Delivery & Implementation Capabilities
+
+IMPLEMENTATION TIMELINE OPTIONS
+
+Standard implementation: 8 weeks from contract signature to go-live.
+  Week 1–2: Discovery and configuration workshop. Meridian implementation manager meets with customer team to map requirements to platform configuration. Field mapping for integrations completed.
+  Week 3–4: Platform configuration, integration setup, data migration (if applicable).
+  Week 5–6: User acceptance testing with customer team. Feedback incorporated.
+  Week 7: Training (see Training section below).
+  Week 8: Go-live and hypercare begins.
+
+Accelerated implementation: 4 weeks. Available for customers with well-defined requirements and limited integration scope. Requires dedicated customer team availability (minimum 50% of one project manager's time during the 4-week period). Not recommended for implementations with custom integrations.
+
+Enterprise/custom: Timeline agreed during pre-sales technical scoping. Appropriate for complex multi-site rollouts, custom integrations, or phased deployments across multiple business units.
+
+IMPLEMENTATION MANAGER
+
+Every customer receives a dedicated implementation manager from contract signature through end of hypercare. The implementation manager is the single point of contact for all delivery questions. Customers are not routed through a general support queue during implementation.
+
+Implementation managers have an average tenure of 3.2 years at Meridian. All implementation managers are certified on the Meridian platform and have completed at least 10 prior implementations before being assigned to solo accounts.
+
+MIGRATION SUPPORT
+
+Data migration from legacy systems is included in all tiers (up to 5,000 records). Migrations above 5,000 records are scoped and priced separately during pre-sales. Supported migration sources: CSV/Excel export from any system, direct database migration (PostgreSQL, MySQL, MSSQL), SAP data exports.
+
+TRAINING PROGRAM
+
+Online (self-paced): full training library available at learn.meridiansystems.io. Covers all modules. Available in English and Arabic. Completion certificates issued.
+
+Instructor-led (virtual): 4-hour live session with Meridian trainer. Up to 20 participants per session. Covers platform configuration and day-to-day use for end users.
+
+On-site training: Available on request. Travel and accommodation costs borne by customer. Minimum 2 days on-site. Suitable for large rollouts (50+ users) or where in-person training is required by policy.
+
+Train-the-trainer: Meridian trains a nominated customer trainer, who then trains remaining users internally. Suitable for rollouts with 100+ users. Training materials (slides, videos, exercises) provided under license for internal use.
+
+HYPERCARE
+
+Standard hypercare period: 30 days post-go-live. During hypercare, customers receive elevated support response times (4h SLA regardless of support tier), weekly check-in calls with implementation manager, and priority access to configuration changes.
+
+Extended hypercare (45 days): available as a commercial add-on, or included in Enterprise tier contracts. Also available on request for customers with seasonal peak periods that fall shortly after go-live.

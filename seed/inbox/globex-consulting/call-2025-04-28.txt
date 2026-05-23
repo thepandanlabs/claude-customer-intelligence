@@ -1,0 +1,38 @@
+Call transcript — Proposal review
+Date: April 28, 2025
+Participants: Sarah Chen (Meridian Systems, AE), Ahmed Al-Rashid (Globex Consulting, Director of Operations)
+Duration: 27 minutes
+
+---
+
+SARAH: Ahmed, how did the proposal land with your team?
+
+AHMED: Overall, well. I've reviewed it with Layla and Tariq. The Professional tier is the right fit — the feature set matches what we mapped out. My concern is the board approval process, which I want to be transparent about.
+
+SARAH: Tell me more about that.
+
+AHMED: Our board meets quarterly. The next meeting is June 15. Any new vendor contract above 50,000 SAR per year goes to the board for approval — it's a governance requirement. The Professional tier pricing converts to roughly 315,000 SAR at current rates, so yes, this needs board sign-off. I can't expedite that process.
+
+SARAH: I understand. So the earliest you could have approval is mid-June?
+
+AHMED: Correct. And realistically, after the June 15 meeting, I'd need another two weeks for procurement to process the paperwork. So we're looking at a contract signature around July 1 at the earliest, and implementation starting in July.
+
+SARAH: That's helpful to know. Is there anything I can do to support the board presentation? A one-pager, ROI calculations, reference contacts?
+
+AHMED: Actually, yes. A one-pager with projected ROI would be useful. Specifically: the board will want to understand what we get for the investment. If you could help me quantify the time saved on client reporting — the two hours per PM per client per report that I mentioned — that would be compelling.
+
+SARAH: I'll put that together. I'll send it this week.
+
+AHMED: Good. I should also say: I've already positioned this internally as the recommendation. I'm not hedging — I'm going to the board with a clear "yes" recommendation. The process is just slow.
+
+SARAH: I appreciate that. One question: is there a risk the board says no?
+
+AHMED: Low risk. The CFO is supportive — she's been asking me to solve the client reporting problem for two years. The main variable is whether they want to negotiate the price. I expect they'll ask me to go back to you with a counter.
+
+SARAH: If that happens, just bring it to me directly and we'll work through it.
+
+---
+
+[Action items]
+- Sarah Chen (Meridian): send ROI one-pager quantifying client reporting time savings to Ahmed Al-Rashid by May 2, 2025
+- Next milestone: Ahmed to present to board June 15; follow-up conversation scheduled for June 20

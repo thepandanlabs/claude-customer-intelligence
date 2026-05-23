@@ -1,0 +1,42 @@
+From: Sarah Chen <s.chen@meridiansystems.io>
+To: James Park <j.park@acme-software.com>
+Date: February 10, 2025
+Subject: RE: Meridian Systems — capability overview + SAP notes
+
+Hi James,
+
+As promised — the Meridian capability overview is attached. A few things I want to flag specifically based on our conversation:
+
+**Vendor onboarding module**
+This is a purpose-built workflow in our platform. You define the checklist, set the approval sequence (Legal → Finance → IT Security, for example), and the system handles routing, reminders, and status tracking automatically. Vendors get a self-service portal to submit documents. Your team gets a dashboard. Average customer reduces onboarding time from ~30 days to ~8 days in the first 90 days.
+
+**SAP integration**
+We have a native SAP connector — it covers SAP S/4HANA (on-prem and cloud) and SAP ECC 6.0. We sync vendor master data bi-directionally. I've included a one-pager on the connector in the attachment. If you can share which SAP version and release you're on, I can confirm specifics before we go further.
+
+**SOC2**
+We are SOC2 Type II certified (most recent audit report: September 2024). The full report is available under NDA — just let me know and I can get that process started with our legal team.
+
+Happy to set up a follow-on call or go straight to a demo — whatever's most useful at this stage.
+
+Best,
+Sarah
+
+---
+
+From: James Park <j.park@acme-software.com>
+Date: February 12, 2025
+Subject: RE: Meridian Systems — capability overview + SAP notes
+
+Sarah,
+
+Good timing — I shared this with my team this morning.
+
+Two questions before we go to demo:
+
+1. SOC2 — yes, please start the NDA process. Our security team (lead: David Kim, CTO) will want to see the full report before we go any further. Can you send the NDA to legal@acme-software.com?
+
+2. SAP integration — we're on S/4HANA, cloud edition, release 2022. Are there any known gaps with that version? The last vendor we evaluated had issues with our custom purchase order fields.
+
+If those two come back clean, I'm happy to get a demo on the calendar with David included.
+
+James

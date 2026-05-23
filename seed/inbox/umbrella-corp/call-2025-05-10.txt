@@ -1,0 +1,33 @@
+Call transcript — Introduction call
+Date: May 10, 2025
+Participants: Tom Walsh (Meridian Systems, BDR), Lisa Chen (Umbrella Corp, Head of Digital)
+Duration: 22 minutes
+
+---
+
+TOM: Lisa, thanks for making time. Tell me a bit about where Umbrella Corp is in the transformation journey — I know you've made some public statements about it but I'd love to hear your perspective.
+
+LISA: Sure. We're about 18 months into what we're calling our digital transformation. Honestly, we're still in the planning and foundation stage. We've made some infrastructure investments — moved a lot of our internal systems to cloud — but in terms of changing how people actually work, we haven't gotten there yet.
+
+TOM: What does "changing how people work" look like for you? What are you trying to achieve?
+
+LISA: A few things. Reduce manual process — we have a lot of it. Improve visibility into what's happening across our divisions — we have four business units that operate pretty independently. And build the capability to move faster when we make decisions, instead of everything taking six months because it has to go through a manual approval chain.
+
+TOM: Have you identified specific workflows you want to automate, or is it still at the strategy level?
+
+LISA: Honestly — still strategy level. We know the problems but we haven't done the process mapping work yet. That's something we're planning to do in Q3. My team is running an internal workshop in the next few weeks to start mapping our highest-pain processes.
+
+TOM: That's actually a great place to have a conversation. We've done some work helping companies at exactly that stage — not just selling them software, but helping frame the process mapping work. I can share a few case studies. Would it be useful to bring in one of our account executives — someone with more technical depth — once you have some initial outputs from your internal workshop?
+
+LISA: Yes, I think that makes sense. Let's do that after our workshop. I'd say mid-June would be a realistic time to reconnect.
+
+TOM: Works for me. In the meantime, I'll send over our capability overview deck — gives you a sense of what we cover so you can bear it in mind during your workshop.
+
+LISA: Good. Send it over and I'll share it with the team.
+
+---
+
+[Action items]
+- Tom Walsh (Meridian): send capability overview deck to Lisa Chen
+- Lisa Chen (Umbrella Corp): share deck with team; schedule working session post-internal workshop (target: mid-June reconnect)
+- Note: Umbrella Corp is early-stage; no defined use case yet; process mapping workshop scheduled internally before next conversation

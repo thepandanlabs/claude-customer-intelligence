@@ -1,0 +1,46 @@
+Meeting notes — Product demo
+Date: March 5, 2025
+Location: Acme Software HQ, San Francisco (+ Zoom for Sarah)
+Attendees: James Park (Acme, VP Operations), David Kim (Acme, CTO), Sarah Chen (Meridian Systems, AE)
+Duration: 75 minutes
+
+---
+
+AGENDA
+1. Demo: vendor onboarding workflow
+2. Q&A: technical architecture and integrations
+3. Next steps
+
+---
+
+DEMO NOTES
+
+Sarah walked through the vendor onboarding module live using a sandbox account configured to mirror Acme's approval chain (Legal → Finance → IT Security). James noted that the self-service vendor portal was "cleaner than I expected" and asked if it was white-labelable. Sarah confirmed: yes, custom domain and logo supported on Professional and Enterprise tiers.
+
+David Kim joined about 15 minutes in. He asked Sarah to walk through the SAP integration live. Sarah showed the bi-directional vendor master sync using a demo SAP tenant. David's question: "How do you handle custom fields? We have about 40 custom fields on our vendor master."
+
+Sarah: "Custom fields are mapped during implementation. Our implementation team does a field-mapping session in week one. We've done it with S/4HANA cloud customers who have up to 200 custom fields — no problems. I'll send you the technical spec so David can review the mapping schema in detail."
+
+David asked about API rate limits. Sarah said she'd include that in the technical spec.
+
+David: "The demo looks good. My main concern is multi-tenant data isolation — we have strict requirements from our own security team about where our data lives relative to other customers."
+
+Sarah: "We are fully multi-tenant with strict data isolation — separate schemas per tenant, no shared compute. I'll cover this in the technical spec. If David wants to get into the architecture in detail, I can also set up a call with our solutions engineer."
+
+James: "Let's do that — get us the tech spec first and then we'll decide if we need the solutions engineer call."
+
+Reaction summary: James was visibly positive about the vendor onboarding module. David was engaged and technically rigorous — asked good questions about the API and data isolation. No objections raised on pricing yet (pricing not discussed in this session).
+
+---
+
+COMMITMENTS
+
+- Sarah Chen (Meridian): send technical spec covering SAP custom field mapping, API rate limits, and multi-tenant data isolation architecture to David Kim and James Park by March 15, 2025.
+- Sarah Chen (Meridian): include solutions engineer contact details in the technical spec email so David can request a deep-dive call if needed.
+
+---
+
+NEXT STEPS
+
+- Acme to review technical spec internally (David Kim lead)
+- Follow-up call to be scheduled after spec review (target: early April)

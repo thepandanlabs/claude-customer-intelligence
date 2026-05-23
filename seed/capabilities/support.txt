@@ -1,0 +1,48 @@
+Meridian Systems — Support Capabilities
+
+SUPPORT TIERS
+
+Starter
+- Channels: Email only
+- Response SLA: 48 business hours
+- Coverage: Business hours (Monday–Friday, 9am–6pm Gulf Standard Time)
+- Self-service: Full access to knowledge base and community forum
+- No dedicated customer success manager
+
+Professional
+- Channels: Email and live chat
+- Response SLA: 8 business hours
+- Coverage: Business hours (Monday–Friday, 9am–6pm Gulf Standard Time)
+- Dedicated Customer Success Manager (CSM): Yes. CSM is the named point of contact for all non-emergency issues, onboarding questions, and feature guidance.
+- Quarterly Business Reviews: Yes. CSM schedules and runs a structured QBR every 90 days covering platform utilisation, open issues, and upcoming feature roadmap.
+- Escalation path: CSM escalates to engineering within 4 business hours for P1 issues
+
+Enterprise
+- Channels: Email, live chat, and phone (24/7)
+- Response SLA: 2 hours (24/7, including weekends and public holidays)
+- Coverage: 24/7/365
+- Named Support Engineer: Yes. A named Meridian engineer is assigned to the account and has context on the customer's configuration and integration setup.
+- Dedicated Customer Success Manager: Yes
+- Quarterly Business Reviews: Yes
+- Escalation path: Named support engineer escalates directly to product engineering for P1 issues; target resolution within 8 hours for P1
+- Executive escalation: Available for Enterprise customers — CSM can escalate to Meridian VP of Customer Success within 1 business hour if unresolved after initial SLA
+
+PRIORITY LEVELS
+
+P1 — Critical: Platform unavailable or data inaccessible. All tiers: immediate escalation. Enterprise: 2-hour response.
+P2 — High: Core functionality degraded. Enterprise: 4-hour response. Professional: next business day.
+P3 — Medium: Non-critical functionality affected, workaround available. All tiers: within SLA.
+P4 — Low: Feature requests, questions, general guidance. All tiers: within SLA.
+
+HYPERCARE SUPPORT (post go-live)
+
+During the hypercare period (30 days standard, 45 days extended), all customers receive elevated support regardless of tier:
+- 4-hour response SLA for all issues
+- Weekly check-in calls with implementation manager
+- Priority access to configuration change requests
+
+STATUS PAGE
+
+Real-time platform status available at status.meridiansystems.io. Includes current status of all platform components, historical uptime data, and incident history. Customers can subscribe to email or webhook notifications for status changes.
+
+Uptime SLA: 99.9% (Professional), 99.95% (Enterprise), measured monthly.

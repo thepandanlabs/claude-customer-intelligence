@@ -1,0 +1,38 @@
+From: Sarah Chen <s.chen@meridiansystems.io>
+To: David Kim <d.kim@acme-software.com>, James Park <j.park@acme-software.com>
+Date: March 12, 2025
+Subject: Meridian technical spec — SAP integration, API, data isolation
+
+David, James,
+
+Sending this a few days ahead of the March 15 deadline — technical spec is attached.
+
+Contents:
+- Section 1: SAP S/4HANA Cloud integration — field mapping process, supported field types, known limitations
+- Section 2: API — rate limits by tier, authentication (OAuth 2.0), webhook architecture
+- Section 3: Multi-tenant architecture — data isolation model, encryption at rest and in transit, tenant separation guarantees
+- Section 4: SOC2 audit summary (full report available after NDA is signed)
+
+A note on SAP custom fields: we support all standard SAP field types including customer-defined (Z-fields). The field mapping session during implementation takes approximately half a day. If you have 40 custom fields, this is well within the normal range.
+
+Let me know if you have questions. Happy to set up a call with our solutions engineer, Nick Patel, if David wants to go deeper on the architecture.
+
+Sarah
+
+---
+
+From: David Kim <d.kim@acme-software.com>
+Date: March 14, 2025
+Subject: RE: Meridian technical spec — SAP integration, API, data isolation
+
+Sarah,
+
+Read through the spec. Overall looks good — the SAP integration section is thorough and the API documentation is cleaner than most vendors provide.
+
+One question on multi-tenant data isolation: Section 3 describes separate schemas per tenant, but doesn't address the compute layer. Our question is specifically about shared compute infrastructure. In the event of a noisy-neighbor situation, can one tenant's workload affect another tenant's performance or, more critically, create a path to cross-tenant data access?
+
+Can you get me an answer on this — either from your engineering team or a pointer to a more detailed architecture document?
+
+James — the rest of the spec looks fine to me. I'm comfortable moving forward contingent on the answer to the above.
+
+David

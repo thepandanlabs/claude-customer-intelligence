@@ -1,0 +1,62 @@
+Meeting notes — Requirements workshop
+Date: March 20, 2025
+Location: Globex Consulting offices, Riyadh + Zoom (Sarah)
+Attendees: Ahmed Al-Rashid (Director of Operations), Layla Hassan (Senior Project Manager), Tariq Osman (IT Manager), Sarah Chen (Meridian Systems, AE)
+Duration: 2 hours 10 minutes
+
+---
+
+REQUIREMENTS CAPTURED
+
+1. Project status tracking
+   - Central dashboard showing all active projects, status (on track / at risk / overdue), last updated
+   - PM updates project status via a simple form — not a complex UI
+   - Status history retained for each project (minimum 12 months)
+   - Layla's note: "PMs will not adopt something that takes more than 3 minutes to update"
+
+2. Client reporting
+   - Auto-generate a status report PDF per client on a configurable schedule (every 2 weeks by default)
+   - Report pulls from current project status automatically
+   - Branded with Globex logo and client name on cover
+   - PM can add a narrative summary section before sending
+   - Client receives via email; optionally, client can log in to view reports
+   - Ahmed: "The client login is a nice-to-have, not a must-have for initial rollout"
+
+3. Resource allocation view
+   - Consultants assigned to projects are tracked in the system
+   - Ahmed's ops team can see allocation by consultant (% committed, which projects)
+   - Tariq flagged: headcount data is currently in SAP SuccessFactors — integration needed
+
+4. Integrations required (Tariq)
+   - SAP SuccessFactors (headcount, consultant records) — must-have
+   - Microsoft Outlook / Teams — notifications and report delivery
+   - Tariq: "No Slack. We're a Microsoft house."
+
+5. Access control
+   - Role: Operations Admin (Ahmed's team) — full access
+   - Role: Project Manager — own projects only, report builder
+   - Role: Client Sponsor (external) — read-only, own project status reports only
+
+6. Reporting and analytics
+   - Ahmed: "I want to know, at the end of each month, which projects were delivered on time and which weren't. I want that automatically, not manually compiled."
+
+---
+
+OPEN QUESTIONS
+
+- Does Meridian have a SuccessFactors connector? (Sarah to confirm)
+- What is pricing model — per project? per seat? per consultant?
+- What does client portal access cost? (Ahmed said not a priority but wants to know)
+
+---
+
+COMMITMENTS
+
+- Ahmed Al-Rashid (Globex): send current-state process documentation (how PMs currently update status, how reports are currently generated) to Sarah Chen by March 27, 2025.
+- Sarah Chen (Meridian): confirm SAP SuccessFactors connector availability; respond to open questions; prepare proposal for review.
+
+---
+
+NEXT STEPS
+
+Sarah to prepare a formal proposal with three tiers. Ahmed's preference: see options and make a recommendation to his management team. Timeline for board-level approval: Ahmed estimated 6–8 weeks from proposal receipt.

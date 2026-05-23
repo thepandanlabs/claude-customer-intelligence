@@ -1,0 +1,41 @@
+From: Sarah Chen <s.chen@meridiansystems.io>
+To: Ahmed Al-Rashid <a.alrashid@globex-consulting.com>
+CC: Tariq Osman <t.osman@globex-consulting.com>
+Date: April 5, 2025
+Subject: Meridian proposal — Globex Consulting
+
+Ahmed, Tariq,
+
+Proposal attached. I've structured it around the requirements from your March 20 workshop. Three packages:
+
+**Starter — $48,000/year**
+- Project status tracking (up to 60 active projects)
+- Client reporting module (auto-generated PDF, Globex-branded)
+- 5 PM seats, unlimited client-read access
+- Email integration (Outlook)
+- Email support, 48h SLA
+
+**Professional — $84,000/year**
+- Everything in Starter, plus:
+- Up to 150 active projects
+- 20 PM seats, unlimited client-read access
+- Resource allocation dashboard
+- SAP SuccessFactors integration (native connector — I confirmed availability)
+- Microsoft Teams notifications
+- Client portal (web login for client sponsors)
+- Dedicated CSM, 8h support SLA
+- Quarterly business reviews
+
+**Enterprise — custom pricing**
+- Everything in Professional, plus:
+- Unlimited projects and seats
+- Custom integrations via professional services
+- 24/7 phone support, 2h SLA
+- Named support engineer
+- Custom contract terms
+
+**My recommendation**: Professional tier maps directly to the requirements you outlined. It includes the SuccessFactors integration Tariq flagged, the resource allocation view, and the client portal. Starter is viable if you want to pilot first and upgrade later — we can structure that as a 12-month Starter with upgrade rights.
+
+Happy to walk through the proposal on a call. I've blocked time Thursday April 10, 2–3pm Riyadh time — let me know if that works or suggest another slot.
+
+Sarah

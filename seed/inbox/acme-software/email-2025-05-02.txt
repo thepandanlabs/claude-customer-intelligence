@@ -1,0 +1,36 @@
+From: Sarah Chen <s.chen@meridiansystems.io>
+To: James Park <j.park@acme-software.com>
+Date: May 2, 2025
+Subject: Commercial offer — Acme Software 2-year agreement
+
+James,
+
+Apologies for the slight delay past April 25 — I wanted to make sure I was coming back with something real, not a placeholder.
+
+Here's where we landed: Meridian finance has approved a 15% discount on the annual license fee for a 2-year upfront commitment. That brings the total contract value to $204,000 over 24 months ($102,000/year vs. the $120,000 we quoted initially). Implementation and onboarding fees are unchanged.
+
+I know you came in at 20% and I pushed hard internally — 15% is the number I was able to get approved. A few things that I think make this a strong offer even at 15%:
+
+- Price lock for both years (no annual increase)
+- Dedicated implementation manager (standard on Enterprise, usually quoted separately)
+- Extended hypercare period — 45 days instead of the standard 30
+
+If you're able to move before June 15, I can also throw in a complimentary training session for your extended approvals team (the eight or so folks in Legal, Finance, IT Security who'll be using the platform).
+
+What do you think? Happy to jump on a call.
+
+Sarah
+
+---
+
+From: James Park <j.park@acme-software.com>
+Date: May 5, 2025
+Subject: RE: Commercial offer — Acme Software 2-year agreement
+
+Sarah,
+
+Thanks for coming back with something concrete. The 15% isn't where I hoped to land but I understand there's a limit.
+
+Here's where things stand on our end: I need Rachel (CFO) to formally approve this. She's been supportive in principle but hasn't seen the final number yet. I'm going to brief her this week. I can't promise a timeline on her end — it depends on her calendar and what else is on her plate. I'll push to have an answer for you by May 16.
+
+James

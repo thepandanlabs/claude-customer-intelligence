@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Intelligence — Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background:#262624; color:hsl(0 0% 98%); font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; }
+  .accent { color:#D17D59; }
+  .card { background:#2e2e2c; border:1px solid hsl(240 3.7% 15.9%); border-radius:0.5rem; padding:1rem 1.25rem; }
+  .badge { display:inline-block; padding:0.15rem 0.5rem; border-radius:0.25rem; font-size:0.625rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; }
+  .filter-btn { padding:0.35rem 0.85rem; border-radius:0.375rem; font-size:0.75rem; font-weight:600; border:1px solid hsl(240 3.7% 20%); background:transparent; color:hsl(0 0% 55%); cursor:pointer; transition:all 0.12s; }
+  .filter-btn.active { border-color:#D17D59; color:#D17D59; background:rgba(209,125,89,0.08); }
+  .filter-btn:hover:not(.active) { border-color:hsl(240 3.7% 30%); color:hsl(0 0% 75%); }
+  .stat-box { background:#2e2e2c; border:1px solid hsl(240 3.7% 15.9%); border-radius:0.5rem; padding:0.875rem 1.25rem; text-align:center; }
+  .sample-banner { background:rgba(234,179,8,0.08); border:1px solid rgba(234,179,8,0.25); border-radius:0.5rem; padding:0.75rem 1rem; color:#EAB308; font-size:0.75rem; margin-bottom:1.5rem; }
+  table { width:100%; border-collapse:collapse; font-size:0.8125rem; }
+  th { text-align:left; padding:0.5rem 0.75rem; color:hsl(0 0% 44%); font-size:0.6875rem; letter-spacing:0.05em; text-transform:uppercase; border-bottom:1px solid hsl(240 3.7% 15.9%); }
+  td { padding:0.625rem 0.75rem; color:hsl(0 0% 82%); border-bottom:1px solid hsl(240 3.7% 10%); vertical-align:top; }
+  tr:hover td { background:rgba(255,255,255,0.02); }
+  #search { background:#2e2e2c; border:1px solid hsl(240 3.7% 20%); border-radius:0.375rem; padding:0.375rem 0.75rem; color:hsl(0 0% 88%); font-size:0.8125rem; font-family:inherit; outline:none; }
+  #search:focus { border-color:#D17D59; }
+  #search::placeholder { color:hsl(0 0% 36%); }
+  .account-card { background:#2e2e2c; border:1px solid hsl(240 3.7% 15.9%); border-radius:0.5rem; padding:1rem 1.25rem; margin-bottom:0.75rem; }
+  .account-card:hover { border-color:rgba(209,125,89,0.3); }
+  .commit-row { padding:0.4rem 0; border-bottom:1px solid hsl(240 3.7% 10%); font-size:0.8125rem; }
+  .commit-row:last-child { border-bottom:none; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<div class="max-w-5xl mx-auto px-5 py-10">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-8">
+    <div>
+      <div class="text-xs accent font-bold tracking-widest uppercase mb-1">account · ledger</div>
+      <h1 class="text-2xl font-bold" style="color:hsl(0 0% 98%);letter-spacing:-0.02em;">Dashboard</h1>
+    </div>
+    <div class="text-xs" style="color:hsl(0 0% 36%);" id="exported-at"></div>
+  </div>
+
+  <!-- Sample banner -->
+  <div class="sample-banner" id="sample-banner" style="display:none;">
+    ⚠ Showing sample data. Run <code style="background:rgba(234,179,8,0.12);padding:0.1rem 0.3rem;border-radius:3px;">account export</code> then refresh to load your real ledger.
+  </div>
+
+  <!-- Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8" id="stats"></div>
+
+  <!-- View toggle + search -->
+  <div class="flex flex-wrap items-center gap-2 mb-6">
+    <div class="flex gap-1 flex-wrap" id="view-filters"></div>
+    <div class="ml-auto">
+      <input id="search" type="text" placeholder="Filter by account…" oninput="renderView()">
+    </div>
+  </div>
+
+  <!-- Content area -->
+  <div id="content-area"></div>
+
+</div>
+
+<script>
+const SAMPLE = {
+  exported_at: new Date().toISOString(),
+  is_sample: true,
+  accounts: [
+    {
+      name: "acme-software",
+      display_name: "Acme Software",
+      interaction_count: 8,
+      last_contact: "2025-05-19",
+      last_interaction_type: "meeting",
+      last_interaction_summary: "Executive alignment — Sarah, Marcus, Rachel Wong, James Park",
+      open_commitments: [
+        { text: "Send implementation plan", deadline: "2025-05-30", owner: "Sarah Chen", source: "meeting-2025-05-19.txt", overdue: false },
+        { text: "Confirm ERP integration scope (SAP)", deadline: null, owner: "David Kim", source: "email-2025-02-10.txt", overdue: false },
+      ],
+      risks: ["CFO approval pending — decision timeline unclear", "Competitor Workato mentioned in negotiation call"],
+      competitors_mentioned: ["Workato"],
+      status: "negotiation"
+    },
+    {
+      name: "globex-consulting",
+      display_name: "Globex Consulting",
+      interaction_count: 6,
+      last_contact: "2025-05-10",
+      last_interaction_type: "email",
+      last_interaction_summary: "Board meeting delayed to June 15 — timeline pushed",
+      open_commitments: [
+        { text: "Follow up after board meeting", deadline: "2025-06-20", owner: "Sarah Chen", source: "email-2025-05-10.txt", overdue: false },
+        { text: "Share revised pricing for 2-year option", deadline: null, owner: "Sarah Chen", source: "call-2025-04-28.txt", overdue: false },
+      ],
+      risks: ["Stalled — board decision delayed 6–8 weeks", "No champion identified above Director level"],
+      competitors_mentioned: [],
+      status: "stalled"
+    },
+    {
+      name: "initech-retail",
+      display_name: "Initech Retail",
+      interaction_count: 4,
+      last_contact: "2025-05-15",
+      last_interaction_type: "email",
+      last_interaction_summary: "Deadline extended to July 1 due to internal re-org",
+      open_commitments: [
+        { text: "Submit RFP response", deadline: "2025-07-01", owner: "Sarah Chen", source: "email-2025-05-15.txt", overdue: false },
+      ],
+      risks: ["Internal re-org in progress — new stakeholders may change requirements"],
+      competitors_mentioned: [],
+      status: "rfp-active"
+    },
+    {
+      name: "umbrella-corp",
+      display_name: "Umbrella Corp",
+      interaction_count: 3,
+      last_contact: "2025-05-20",
+      last_interaction_type: "email",
+      last_interaction_summary: "Lisa Chen shared capability overview with her team",
+      open_commitments: [
+        { text: "Wait for Lisa's team internal workshop results", deadline: null, owner: "Tom (SDR)", source: "email-2025-05-20.txt", overdue: false },
+      ],
+      risks: ["Early-stage — no defined use case yet"],
+      competitors_mentioned: [],
+      status: "early"
+    }
+  ],
+  interactions: [
+    { account: "acme-software",      date: "2025-05-19", type: "meeting", source_file: "meeting-2025-05-19.txt", summary: "Executive alignment — CFO introduced" },
+    { account: "acme-software",      date: "2025-05-02", type: "email",   source_file: "email-2025-05-02.txt",   summary: "15% discount confirmed" },
+    { account: "acme-software",      date: "2025-04-18", type: "call",    source_file: "call-2025-04-18.txt",    summary: "Negotiation — Workato mentioned" },
+    { account: "acme-software",      date: "2025-03-12", type: "email",   source_file: "email-2025-03-12.txt",   summary: "Technical spec follow-up" },
+    { account: "acme-software",      date: "2025-03-05", type: "meeting", source_file: "meeting-2025-03-05.txt", summary: "Demo — James Park + CTO David Kim" },
+    { account: "acme-software",      date: "2025-02-10", type: "email",   source_file: "email-2025-02-10.txt",   summary: "SOC2 and SAP integration questions" },
+    { account: "acme-software",      date: "2025-02-03", type: "call",    source_file: "call-2025-02-03.txt",    summary: "Discovery call — 3 pain points" },
+    { account: "acme-software",      date: "2025-01-15", type: "email",   source_file: "email-2025-01-15.txt",   summary: "Initial outreach" },
+    { account: "globex-consulting",  date: "2025-05-10", type: "email",   source_file: "email-2025-05-10.txt",   summary: "Board delayed to June 15" },
+    { account: "globex-consulting",  date: "2025-04-28", type: "call",    source_file: "call-2025-04-28.txt",    summary: "Proposal review — board approval needed" },
+    { account: "globex-consulting",  date: "2025-04-05", type: "email",   source_file: "email-2025-04-05.txt",   summary: "Proposal sent — 3 packages" },
+    { account: "globex-consulting",  date: "2025-03-20", type: "meeting", source_file: "meeting-2025-03-20.txt", summary: "Requirements workshop (2h)" },
+    { account: "globex-consulting",  date: "2025-02-15", type: "call",    source_file: "call-2025-02-15.txt",    summary: "Qualification call" },
+    { account: "globex-consulting",  date: "2025-02-01", type: "email",   source_file: "email-2025-02-01.txt",   summary: "Inbound inquiry via referral" },
+    { account: "initech-retail",     date: "2025-05-15", type: "email",   source_file: "email-2025-05-15.txt",   summary: "Deadline extended to July 1" },
+    { account: "initech-retail",     date: "2025-04-22", type: "email",   source_file: "email-2025-04-22.txt",   summary: "RFP received (12 requirements)" },
+    { account: "initech-retail",     date: "2025-04-02", type: "meeting", source_file: "meeting-2025-04-02.txt", summary: "Discovery + live demo" },
+    { account: "initech-retail",     date: "2025-03-10", type: "email",   source_file: "email-2025-03-10.txt",   summary: "Referral introduction" },
+    { account: "umbrella-corp",      date: "2025-05-20", type: "email",   source_file: "email-2025-05-20.txt",   summary: "Capability overview shared with team" },
+    { account: "umbrella-corp",      date: "2025-05-10", type: "call",    source_file: "call-2025-05-10.txt",    summary: "Intro call — early-stage exploration" },
+    { account: "umbrella-corp",      date: "2025-05-01", type: "email",   source_file: "email-2025-05-01.txt",   summary: "Cold outreach — positive response" },
+  ]
+};
+
+const STATUS_COLORS = {
+  negotiation: { bg: 'rgba(209,125,89,0.15)', color: '#D17D59', label: 'Negotiation' },
+  stalled:     { bg: 'rgba(239,68,68,0.12)',  color: '#F87171', label: 'Stalled' },
+  'rfp-active':{ bg: 'rgba(126,200,164,0.15)',color: '#7EC8A4', label: 'RFP Active' },
+  early:       { bg: 'rgba(148,163,184,0.12)',color: 'hsl(0 0% 55%)', label: 'Early Stage' },
+};
+
+const TYPE_COLORS = {
+  email:   'hsl(0 0% 55%)',
+  call:    '#60A5FA',
+  meeting: '#A78BFA',
+  note:    '#7EC8A4',
+};
+
+let DATA = null;
+let activeView = 'accounts';
+
+async function init() {
+  try {
+    const r = await fetch('data.json');
+    if (r.ok) DATA = await r.json();
+  } catch(_) {}
+
+  if (!DATA) {
+    DATA = SAMPLE;
+    document.getElementById('sample-banner').style.display = 'block';
+  }
+
+  if (DATA.exported_at) {
+    document.getElementById('exported-at').textContent =
+      'exported ' + new Date(DATA.exported_at).toLocaleString();
+  }
+
+  renderStats();
+  renderViewFilters();
+  renderView();
+}
+
+function renderStats() {
+  const accounts = DATA.accounts || [];
+  const interactions = DATA.interactions || [];
+  const openCommits = accounts.reduce((s, a) => s + (a.open_commitments?.length || 0), 0);
+  const pitches = DATA.pitches?.length || 0;
+
+  document.getElementById('stats').innerHTML = [
+    [accounts.length,     'accounts',      '#D17D59'],
+    [interactions.length, 'interactions',  'hsl(0 0% 78%)'],
+    [openCommits,         'open commits',  '#EAB308'],
+    [pitches || '—',      'pitches',       '#7EC8A4'],
+  ].map(([val, label, col]) => `
+    <div class="stat-box">
+      <div style="font-size:1.375rem;font-weight:700;color:${col};line-height:1;">${val}</div>
+      <div style="font-size:0.6875rem;color:hsl(0 0% 44%);margin-top:0.25rem;">${label}</div>
+    </div>`).join('');
+}
+
+function renderViewFilters() {
+  const views = [
+    { id: 'accounts',     label: 'Accounts' },
+    { id: 'commitments',  label: 'Open Commitments' },
+    { id: 'interactions', label: 'All Interactions' },
+  ];
+  document.getElementById('view-filters').innerHTML = views.map(v => `
+    <button class="filter-btn${v.id === activeView ? ' active' : ''}" data-view="${v.id}" onclick="setView('${v.id}')">${v.label}</button>
+  `).join('');
+}
+
+function setView(v) {
+  activeView = v;
+  document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  renderView();
+}
+
+function renderView() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const area = document.getElementById('content-area');
+  const accounts = (DATA.accounts || []).filter(a => !q || a.display_name.toLowerCase().includes(q));
+  const interactions = (DATA.interactions || []).filter(i => !q || i.account.includes(q));
+
+  if (activeView === 'accounts') {
+    if (!accounts.length) { area.innerHTML = '<div class="text-center py-8" style="color:hsl(0 0% 36%);">No accounts match this filter.</div>'; return; }
+    area.innerHTML = accounts.map(a => {
+      const st = STATUS_COLORS[a.status] || STATUS_COLORS.early;
+      const daysAgo = Math.floor((Date.now() - new Date(a.last_contact).getTime()) / 86400000);
+      const lastContactAge = daysAgo > 30 ? `<span style="color:#EAB308;">${daysAgo}d ago</span>` : `<span style="color:hsl(0 0% 55%);">${daysAgo}d ago</span>`;
+      const commits = (a.open_commitments || []).map(c => {
+        const deadlineHtml = c.deadline
+          ? `<span style="color:${isOverdue(c.deadline) ? '#EF4444' : '#EAB308'};">${c.deadline}</span>`
+          : `<span style="color:hsl(0 0% 36%);">TBD</span>`;
+        return `<div class="commit-row"><span style="color:#D17D59;">→</span> <span style="color:hsl(0 0% 88%);">${escHtml(c.text)}</span> <span style="color:hsl(0 0% 44%);"> · ${deadlineHtml} · <span style="color:hsl(0 0% 55%);">${escHtml(c.owner || '')}</span></span></div>`;
+      }).join('');
+      const risks = (a.risks || []).map(r => `<div style="font-size:0.6875rem;color:#EAB308;padding:0.2rem 0;">⚠ ${escHtml(r)}</div>`).join('');
+      const competitors = a.competitors_mentioned?.length
+        ? `<span style="font-size:0.6875rem;color:#F87171;"> · competitors: ${a.competitors_mentioned.map(escHtml).join(', ')}</span>` : '';
+      return `
+        <div class="account-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+            <span style="font-size:1rem;font-weight:700;color:hsl(0 0% 96%);">${escHtml(a.display_name)}</span>
+            <span class="badge" style="background:${st.bg};color:${st.color};">${st.label}</span>
+            ${a.open_commitments?.length ? `<span class="badge" style="background:rgba(234,179,8,0.12);color:#EAB308;">${a.open_commitments.length} open</span>` : ''}
+            <span style="margin-left:auto;font-size:0.6875rem;color:hsl(0 0% 44%);">${a.interaction_count} interactions · last contact ${lastContactAge}</span>
+          </div>
+          <div style="font-size:0.6875rem;color:hsl(0 0% 50%);margin-bottom:0.75rem;">${escHtml(a.last_interaction_summary || '')}${competitors}</div>
+          ${commits ? `<div style="border-top:1px solid hsl(240 3.7% 12%);padding-top:0.5rem;margin-top:0.25rem;">${commits}</div>` : ''}
+          ${risks ? `<div style="border-top:1px solid hsl(240 3.7% 12%);padding-top:0.5rem;margin-top:0.5rem;">${risks}</div>` : ''}
+        </div>`;
+    }).join('');
+
+  } else if (activeView === 'commitments') {
+    const all = (DATA.accounts || []).filter(a => !q || a.display_name.toLowerCase().includes(q))
+      .flatMap(a => (a.open_commitments || []).map(c => ({ ...c, account: a.display_name })));
+    if (!all.length) { area.innerHTML = '<div class="text-center py-8" style="color:hsl(0 0% 36%);">No open commitments.</div>'; return; }
+    area.innerHTML = `<div class="card" style="padding:0;overflow:hidden;"><table><thead><tr>
+      <th>Account</th><th>Commitment</th><th>Owner</th><th>Deadline</th><th>Source</th>
+    </tr></thead><tbody>${all.map(c => {
+      const dl = c.deadline
+        ? `<span style="color:${isOverdue(c.deadline)?'#EF4444':'#EAB308'};">${c.deadline}</span>`
+        : '<span style="color:hsl(0 0% 36%);">TBD</span>';
+      return `<tr>
+        <td style="color:#D17D59;">${escHtml(c.account)}</td>
+        <td style="color:hsl(0 0% 90%);">${escHtml(c.text)}</td>
+        <td style="color:hsl(0 0% 60%);">${escHtml(c.owner||'')}</td>
+        <td>${dl}</td>
+        <td style="color:hsl(0 0% 36%);font-size:0.6875rem;">${escHtml(c.source||'')}</td>
+      </tr>`;
+    }).join('')}</tbody></table></div>`;
+
+  } else {
+    if (!interactions.length) { area.innerHTML = '<div class="text-center py-8" style="color:hsl(0 0% 36%);">No interactions match.</div>'; return; }
+    const sorted = [...interactions].sort((a, b) => b.date.localeCompare(a.date));
+    area.innerHTML = `<div class="card" style="padding:0;overflow:hidden;"><table><thead><tr>
+      <th>Date</th><th>Account</th><th>Type</th><th>Summary</th><th>File</th>
+    </tr></thead><tbody>${sorted.map(i => `<tr>
+      <td>${i.date}</td>
+      <td style="color:#D17D59;">${escHtml(i.account)}</td>
+      <td><span style="color:${TYPE_COLORS[i.type]||'hsl(0 0% 55%)'};font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.05em;">${i.type}</span></td>
+      <td style="color:hsl(0 0% 80%);">${escHtml(i.summary||'')}</td>
+      <td style="color:hsl(0 0% 36%);font-size:0.6875rem;">${escHtml(i.source_file||'')}</td>
+    </tr>`).join('')}</tbody></table></div>`;
+  }
+}
+
+function isOverdue(dateStr) {
+  return new Date(dateStr) < new Date();
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+init();
+</script>
+</body>
+</html>

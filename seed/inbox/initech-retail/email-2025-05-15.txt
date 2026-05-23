@@ -1,0 +1,37 @@
+From: Priya Sharma <p.sharma@initech-retail.com>
+To: Sarah Chen <s.chen@meridiansystems.io>
+Date: May 15, 2025
+Subject: RE: Initech Retail — RFP update: deadline extension
+
+Sarah,
+
+I wanted to let you know about a change to the RFP timeline before you invest more time in the response.
+
+Due to an internal re-organisation that is currently underway, our procurement and evaluation team has requested a deadline extension. The new RFP response deadline is July 1, 2025 (previously June 15).
+
+The evaluation and decision timeline will shift accordingly. We are still very interested in this project and the re-org does not change the scope or requirements — it is purely an internal capacity issue during the transition.
+
+Updated schedule:
+- Response deadline: July 1, 2025
+- Evaluation period: July 2 – July 18
+- Decision and notification: July 21, 2025
+
+Please confirm you can accommodate the new deadline.
+
+Priya
+
+---
+
+From: Sarah Chen <s.chen@meridiansystems.io>
+Date: May 15, 2025
+Subject: RE: Initech Retail — RFP update
+
+Priya,
+
+Confirmed — July 1 works for us. We'll have our response to all 12 requirements submitted before that date.
+
+Understood that the re-org is an internal matter. We remain very interested and are committed to delivering a thorough response.
+
+One note: if your implementation timeline requirements shift as a result of the re-org (the original RFP referenced a go-live target of September 30), please let us know so we can adjust the implementation plan section of our response accordingly.
+
+Sarah

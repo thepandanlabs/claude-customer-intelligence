@@ -1,0 +1,56 @@
+Meeting notes — Executive alignment
+Date: May 19, 2025
+Location: Zoom
+Attendees:
+  Acme Software: James Park (VP Operations), Rachel Wong (CFO)
+  Meridian Systems: Sarah Chen (AE), Marcus Liu (CEO)
+Duration: 50 minutes
+
+---
+
+CONTEXT
+
+Marcus Liu joined at Sarah's request to demonstrate executive commitment and address any remaining concerns at the CFO level. James had briefed Rachel on the 15% discount offer the previous week.
+
+---
+
+DISCUSSION
+
+Marcus opened by giving a brief overview of Meridian's trajectory — 3x revenue growth in 18 months, recently closed Series B — and expressed that Acme would be a marquee customer in the software vertical.
+
+Rachel Wong's primary concern: implementation timeline. She was direct — "We have a hard freeze on system changes starting October 1 for our Q4 crunch. If we sign in June, can you guarantee we're fully live before October?"
+
+Sarah: "Our standard implementation is 8 weeks. If we start immediately on signature, we'd be at 8 weeks from mid-June — that's mid-August. Full go-live by mid-August, which gives you 6 weeks of buffer before your freeze. We can do that."
+
+Rachel: "I need that in writing. Not just a verbal assurance — I want a detailed implementation plan that shows me week by week what happens, who's responsible, and what the dependencies are on our side. James's team has limited bandwidth in June."
+
+Sarah: "Understood. I'll provide a detailed implementation plan — week-by-week, owners on both sides, dependencies flagged. I'll have that to you by May 30."
+
+Rachel: "If the implementation plan is credible, I'm ready to move. James has done the technical due diligence, the commercial terms are acceptable. My sign-off is contingent on seeing that plan."
+
+Marcus: "You have my commitment that we'll staff this appropriately. We have an implementation manager — Maya Okonkwo — who has done five S/4HANA implementations in the past 18 months. I'll make her available to walk you through the plan personally if that would help."
+
+Rachel: "That's good to hear. Let's see the plan first."
+
+James: "Rachel, are you comfortable saying: if the plan looks right, you'll sign before June 15?"
+
+Rachel: "Yes. If the plan is credible and there are no surprises, I'll approve before June 15."
+
+---
+
+STATUS: Decision pending CFO sign-off, contingent on delivery of implementation plan.
+
+---
+
+COMMITMENTS
+
+- Sarah Chen (Meridian): deliver detailed week-by-week implementation plan (with named owners and dependency flags) to Rachel Wong and James Park by May 30, 2025.
+- Marcus Liu (Meridian): offer implementation manager Maya Okonkwo for a call with Rachel Wong if requested after plan review.
+
+---
+
+RISKS
+
+- Rachel Wong has a hard Q4 system freeze (October 1). Any delay to implementation start pushes into the risk zone.
+- James Park's team has limited bandwidth in June — implementation dependencies on the Acme side need to be explicitly scoped and staffed.
+- Deal stalls if implementation plan is not credible or delivered late.

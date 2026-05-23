@@ -1,0 +1,57 @@
+Meeting notes — Discovery session + live demo
+Date: April 2, 2025
+Location: Initech Retail HQ, Dubai
+Attendees:
+  Initech Retail: Priya Sharma (Head of IT), Rajan Mehta (VP Store Operations), Anna Kovacs (IT Systems Lead)
+  Meridian Systems: Sarah Chen (AE), Nick Patel (Solutions Engineer)
+Duration: 2 hours 15 minutes
+
+---
+
+CONTEXT
+
+Initech operates 200 stores. Store managers currently manage daily operations checklists via printed forms and photograph/WhatsApp results to a regional coordinator. Opening/closing procedures, incident reporting, stock discrepancy reporting, and maintenance requests all flow through informal channels (WhatsApp groups, phone calls, email).
+
+---
+
+DISCOVERY — KEY FINDINGS
+
+Rajan Mehta (VP Store Operations) led most of the requirements discussion:
+
+"We're preparing for an RFP process. But I'll be honest — we're here today because I want to see if this is a real solution before we waste time writing requirements for something that doesn't exist in the market. Show me something real and I'll tell you if it's in scope."
+
+Nick ran a live demo of the workflow builder, focusing on:
+- Configurable daily checklists (opening/closing procedures, stock checks)
+- Incident reporting with photo upload and automatic routing to regional coordinator
+- Dashboard: regional coordinator sees all stores, all checklist statuses in real time
+- Escalation rules: if a store hasn't completed the opening checklist by 9am, regional coordinator is automatically notified
+
+Rajan's reaction during demo: "The checklist piece is exactly what we need. The escalation logic — that would have saved us last month when three stores opened late and nobody knew for two hours." Positive throughout.
+
+Priya's questions (technical):
+- "What ERP do you integrate with? We're on SAP S/4HANA."
+- "How does access control work? Store managers should only see their store. Regional coordinators see their region."
+- "Is there a mobile app for store managers? They don't have laptops."
+
+Nick's answers:
+- SAP S/4HANA: native integration, confirmed
+- Access control: role-based, fully configurable — store / region / corporate hierarchy supported
+- Mobile: responsive web app (no native app); Sarah noted this may or may not be sufficient — to be explored in RFP
+
+Anna Kovacs asked about API access for custom reporting. Nick confirmed: REST API with OpenAPI spec, available on Professional and Enterprise tiers.
+
+---
+
+RFP DISCUSSION
+
+Priya confirmed at end of session: "We will be issuing a formal RFP. Based on today, Meridian will be invited to respond. Deadline will be communicated in the RFP document. I expect to have it out by mid-April."
+
+Sarah asked about number of vendors in the RFP. Priya: "We're inviting three vendors. We don't do wide-open RFPs."
+
+---
+
+NEXT STEPS
+
+- Initech to issue RFP (target: mid-April, deadline mid-June)
+- Meridian to respond to RFP once received
+- Sarah to follow up with Priya if RFP hasn't arrived by April 21

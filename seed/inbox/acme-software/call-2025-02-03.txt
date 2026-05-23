@@ -1,0 +1,44 @@
+Call transcript — Discovery call
+Date: February 3, 2025
+Participants: Sarah Chen (Meridian Systems, AE), James Park (Acme Software, VP Operations)
+Duration: 42 minutes
+
+---
+
+SARAH: Thanks for making time, James. I know Mondays are hectic. Let me just jump in — tell me a bit about where ops sits today at Acme. What does your team own?
+
+JAMES: Sure. We're about 180 people now, growing fast. My team owns everything between sales closing a deal and the customer going live — so vendor onboarding, procurement, contract management, and we have a hand in IT provisioning when new hires come in.
+
+SARAH: And what's the biggest source of pain right now?
+
+JAMES: Honestly, vendor onboarding. It's killing us. We onboard somewhere between 12 and 20 new vendors a quarter and the whole process is manual. We send emails, chase documents, remind people three times before they respond. It takes us on average 34 days to fully onboard a vendor. That's too long.
+
+SARAH: What does the process look like today — is there a system, or is it mostly email?
+
+JAMES: It's mostly email and a shared spreadsheet. We tried using our ERP for it — we're on SAP — but SAP is way too heavy for this. The procurement team uses it for purchase orders but nobody wants to run a vendor onboarding checklist through it. So we defaulted back to email.
+
+SARAH: That's a pretty common story actually. What are the top pain points — what specifically goes wrong?
+
+JAMES: Three things. First, we lose track of where each vendor is in the process. Is the NDA signed? Did they send their insurance certificates? We're checking the spreadsheet, we're checking email — it's two different places. Second, approvals take forever. We need sign-off from Legal, Finance, and IT Security for every vendor, and it's a manual handoff each time. Legal doesn't know Finance has approved yet. Third — and this one is embarrassing — we've had vendors fall through entirely. Someone leaves, the email thread dies, and three months later someone asks "why isn't vendor X set up yet?" and the answer is nobody knows.
+
+SARAH: All three of those are exactly what the Meridian platform is built for. The visibility problem, the approval routing, and the accountability — those are core use cases. Can I ask about scale — how many people touch the vendor onboarding process?
+
+JAMES: On my team, four people. But the approvers — Legal, Finance, IT Security — that's maybe eight more people who are in the loop on every vendor. So twelve-ish.
+
+SARAH: Got it. And you mentioned SAP — are there other systems in play? Any procurement tools or contract management?
+
+JAMES: SAP is the ERP. We use DocuSign for contracts. That's about it on the vendor side.
+
+SARAH: Okay. I want to be straightforward with you — before I put anything together, I need to understand whether what you're describing is actually a fit. The vendor onboarding use case is a strong one for us, but there are a few things I'll need to check, specifically around your SAP version and how deeply you'd need us to integrate. I'll put together a capability overview — document showing what the platform does, which integrations are pre-built, what a typical rollout looks like. I can have that to you by February 10.
+
+JAMES: That works. I'd also want to understand the SOC2 situation early — we have a security team that will ask.
+
+SARAH: Absolutely. We're SOC2 Type II certified. I'll include that in the capability overview. And I'll flag the SAP question — we have native SAP integration but I want to confirm it covers your version.
+
+JAMES: Great. Let's talk after you send it.
+
+---
+
+[Action items captured from call]
+- Sarah Chen (Meridian): send capability overview to James Park by February 10, 2025
+- Sarah Chen (Meridian): confirm SAP version compatibility before next call

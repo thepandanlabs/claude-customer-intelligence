@@ -1,0 +1,45 @@
+Meridian Systems — Integration Capabilities
+
+NATIVE INTEGRATIONS (pre-built, maintained by Meridian)
+
+CRM
+- Salesforce: bi-directional sync of accounts, contacts, opportunities, and custom objects. Supports Salesforce Flow triggers. Available on all tiers.
+- HubSpot: bi-directional sync of contacts, deals, and companies. Available on Professional and Enterprise tiers.
+
+ERP
+- SAP S/4HANA (on-prem and cloud): bi-directional sync of vendor master data, purchase orders, and cost centres. Supports SAP Z-fields (customer-defined fields). Compatible with S/4HANA Cloud release 2021 and later. Integration managed via SAP Integration Suite or direct RFC.
+- SAP ECC 6.0: read-only sync of vendor master data and purchase orders.
+- NetSuite: bi-directional sync of vendors, purchase orders, and project records.
+
+HRIS
+- SAP SuccessFactors: read-only sync of employee records, organisational hierarchy, and headcount. Used for resource allocation views and automated user provisioning.
+
+COLLABORATION
+- Slack: notifications, approval requests, and status updates delivered to Slack channels or DMs. Actions (approve, reject, escalate) can be taken directly from Slack. Available on Professional and Enterprise tiers.
+- Microsoft Teams: same capabilities as Slack. Available on all tiers.
+
+PRODUCTIVITY
+- Jira: bi-directional sync of tasks and project status. Meridian workflow steps can create, update, and close Jira issues. Available on Professional and Enterprise tiers.
+- ServiceNow: bi-directional sync of incidents, requests, and change records. Available on Enterprise tier.
+
+DOCUMENT MANAGEMENT
+- DocuSign: send signature requests from within Meridian workflows; signature status syncs back automatically. Available on all tiers.
+
+API AND CUSTOM INTEGRATIONS
+
+REST API: Full platform functionality exposed via REST API. OpenAPI 3.0 specification available at docs.meridiansystems.io/api. Authentication via OAuth 2.0 (client credentials and authorization code flows).
+
+API rate limits:
+- Starter: 200 requests per minute
+- Professional: 1,000 requests per minute
+- Enterprise: 5,000 requests per minute
+- Burst allowance: 2x sustained rate for up to 60 seconds
+
+Webhooks: Outbound webhooks for all platform events (workflow state changes, approvals, completions, errors). Configurable per workflow. Payload format: JSON. Retry logic: exponential backoff, up to 5 retries.
+
+iPaaS connectors:
+- Zapier: 50+ pre-built Zaps. Available on all tiers.
+- Make (formerly Integromat): native connector. Available on Professional and Enterprise tiers.
+- Microsoft Power Automate: native connector. Available on all tiers.
+
+Custom integrations: Available via Meridian Professional Services. Scoped and priced separately. Typical custom integration project: 2–6 weeks. Integrations are built on the Meridian integration framework and are maintained by Meridian after delivery (covered under support SLA).

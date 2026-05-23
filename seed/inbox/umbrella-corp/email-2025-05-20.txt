@@ -1,0 +1,31 @@
+From: Tom Walsh <t.walsh@meridiansystems.io>
+To: Lisa Chen <l.chen@umbrella-corp.com>
+Date: May 20, 2025
+Subject: Meridian capability overview — as discussed
+
+Lisa,
+
+As promised — the Meridian capability overview deck is attached (PDF). It covers our core modules: workflow automation, approval routing, process visibility dashboard, and integrations.
+
+A few things I'd flag as potentially relevant based on our conversation:
+
+- The "cross-division visibility" section (pages 8–10) might resonate given what you described about your four business units operating independently.
+- The approval routing module (pages 14–16) directly addresses the "six months because of manual approvals" problem you mentioned.
+
+Happy to walk through it on a call if that's useful, but no pressure — share it with your team and let it inform your internal workshop.
+
+Tom
+
+---
+
+From: Lisa Chen <l.chen@umbrella-corp.com>
+Date: May 20, 2025
+Subject: RE: Meridian capability overview
+
+Tom,
+
+Got it — shared with the team this morning.
+
+Early reactions are positive. The cross-division visibility piece got some interest. We'll have more direction after our internal workshop next week. I'll reach out to schedule something once we have initial outputs.
+
+Lisa

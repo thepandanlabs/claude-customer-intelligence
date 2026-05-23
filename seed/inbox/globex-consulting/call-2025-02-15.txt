@@ -1,0 +1,33 @@
+Call transcript — Qualification call
+Date: February 15, 2025
+Participants: Sarah Chen (Meridian Systems, AE), Ahmed Al-Rashid (Globex Consulting, Director of Operations)
+Duration: 38 minutes
+
+---
+
+SARAH: Ahmed, thanks for responding so quickly to my note. I know you mentioned Fatima referred you — I won't take that relationship for granted. Let me start by understanding your situation before we talk about what we do.
+
+AHMED: Of course. The short version: we run 40 to 50 consulting engagements in parallel at any given time. Each engagement has a project manager on our side and a client sponsor on their side. The problem is that status tracking is completely decentralized. Every PM runs their project their own way — some use spreadsheets, some use email, some actually have their clients set up in Jira or Notion. My ops team spends a huge amount of time every week just trying to get a consolidated view of what's going on across all projects.
+
+SARAH: When you say "consolidated view" — what are you actually trying to know?
+
+AHMED: Three things mainly. First: which projects are on track, which are at risk, which are overdue. Right now I have to ask each PM individually and they're all busy. Second: client reporting. Our clients expect a status update every two weeks — professional, formatted, not a copy-paste from a spreadsheet. That takes our PMs about two hours per client per report. Multiply that by 40 clients and it's unsustainable. Third: resource allocation. I need to know where my people are committed so I can make staffing decisions. Today I have a spreadsheet that's always a week out of date.
+
+SARAH: Those are three distinct use cases. Which one is the biggest pain — if you had to pick one?
+
+AHMED: Client reporting. It's the most visible failure. Clients notice when reports are late or inconsistent.
+
+SARAH: Have you evaluated any tools before?
+
+AHMED: We looked at Monday.com and ClickUp about two years ago. Too generic — they're project management tools, not designed for consulting operations where the client is external and needs to see a polished output. We ended up not buying anything.
+
+SARAH: That's consistent with what we hear. The client-facing reporting piece is actually one of our strongest modules. We have a report builder that auto-pulls project status data and generates a branded PDF or web report. I'd like to show you that. Do you want to go straight to a demo or do a more structured requirements session first?
+
+AHMED: Let's do a proper requirements session. I want to make sure we capture what we actually need before we look at demos. Can we block two hours?
+
+SARAH: Absolutely. I'll send you some options for the week of March 17.
+
+---
+
+[Action items]
+- Sarah Chen (Meridian): send calendar options for a 2-hour requirements workshop — week of March 17, 2025

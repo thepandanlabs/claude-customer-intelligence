@@ -1,0 +1,43 @@
+Meridian Systems — Security Capabilities
+
+CERTIFICATIONS
+
+SOC2 Type II: Certified. Most recent audit completed September 2024, covering the period October 2023 – September 2024. Audit performed by Clearwater Assurance LLP. Full report available to prospective customers under NDA. Summary report (no NDA required) available on request.
+
+ISO 27001: Certified. Certificate valid through March 2026. Certifying body: BSI Group. Covers Meridian's information security management system across all production systems and corporate infrastructure.
+
+Penetration testing: Annual third-party penetration test conducted by a CREST-certified firm. Most recent test: November 2024. Executive summary available under NDA.
+
+MULTI-TENANT ARCHITECTURE AND DATA ISOLATION
+
+Meridian is a multi-tenant SaaS platform. Tenant isolation is enforced at multiple layers:
+
+Database layer: Each tenant has a dedicated schema within the database. Row-level security policies prevent cross-tenant data access at the database level. Queries are scoped to tenant context at connection time.
+
+Compute layer: Tenant workloads share compute infrastructure but are isolated by process and namespace. Resource quotas are applied per tenant to prevent noisy-neighbor effects on performance. A single tenant's workload cannot access another tenant's data or process space.
+
+Network layer: Tenant data is encrypted in transit (TLS 1.2 minimum, TLS 1.3 preferred). Traffic between tenants is not possible by design — there is no shared network namespace.
+
+DATA RESIDENCY
+
+Customers choose their data residency region at contract time. Available regions: United States (AWS us-east-1), European Union (AWS eu-west-1), Asia-Pacific (AWS ap-southeast-1). Data does not leave the selected region except for backup (backup stored in the same region). Region selection is permanent for the contract term; migrations between regions require a professional services engagement.
+
+ENCRYPTION
+
+At rest: AES-256. All database contents, file attachments, and backups are encrypted at rest. Encryption keys are managed by AWS KMS. Customer-managed keys (CMK/BYOK) available on Enterprise tier.
+
+In transit: TLS 1.2 minimum. TLS 1.3 supported and preferred. All API endpoints enforce HTTPS. HTTP connections are rejected.
+
+ACCESS CONTROL
+
+Single sign-on: SAML 2.0 and OIDC supported. Compatible with Azure AD, Okta, Google Workspace, and any standards-compliant identity provider. SSO is available on Professional and Enterprise tiers; optional add-on on Starter.
+
+Role-based access control (RBAC): Configurable roles at the platform level. Standard roles: Admin, Manager, User, Read-only. Custom roles with granular permission sets available on Professional and Enterprise tiers.
+
+Multi-factor authentication (MFA): Enforced for all admin accounts. Optional enforcement for all users (configurable by admin).
+
+AUDIT LOGS
+
+All user actions (login, data access, configuration changes, exports) are logged. Logs are tamper-evident and stored separately from application data.
+
+Retention: 90 days standard. 1-year retention available as a compliance add-on (applicable to Professional and Enterprise tiers). Logs exportable via API or SFTP for integration with SIEM systems.

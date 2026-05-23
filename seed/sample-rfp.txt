@@ -1,0 +1,87 @@
+REQUEST FOR PROPOSAL
+Store Operations Workflow Platform
+Initech Retail Group
+
+Issued by: Priya Sharma, Head of IT, Initech Retail Group
+Issue date: April 22, 2025
+Submission deadline: July 1, 2025 (updated May 15, 2025; previously June 15)
+Submission address: rfp@initech-retail.com
+
+---
+
+BACKGROUND
+
+Initech Retail Group operates 200 retail stores across the Gulf region. Store operations are currently managed through a combination of paper checklists, WhatsApp groups, and phone-based exception handling. This approach is not scalable as we grow, and does not provide the visibility and auditability our operations leadership requires.
+
+We are seeking a software platform to digitise and automate our store operations workflows. This RFP covers our requirements. Vendors are expected to respond to each requirement individually, clearly stating whether the requirement is Met, Partially Met, or Not Met, with supporting detail.
+
+Three vendors have been invited to respond to this RFP. Responses will be evaluated by a panel comprising IT, Operations, and Finance stakeholders.
+
+---
+
+REQUIREMENTS
+
+REQ-01: Workflow Automation for Store Operations
+The platform must support configurable digital checklists and workflows for daily store operations, including but not limited to: opening procedures, closing procedures, stock discrepancy reporting, and incident reporting. Workflows must be configurable by administrators without vendor involvement. Store managers must be able to complete checklists and submit reports from a mobile or web interface.
+
+REQ-02: ERP Integration — SAP S/4HANA
+The platform must integrate with SAP S/4HANA (cloud edition, release 2022) to synchronise relevant master data. Vendor must specify which SAP objects are supported and whether custom fields (Z-fields) are supported. Integration must be bi-directional where applicable.
+
+REQ-03: Role-Based Access Control
+The platform must enforce role-based access control that matches Initech's operational hierarchy:
+  - Store Manager: access to own store only (checklists, reporting, incident submission)
+  - Regional Coordinator: access to all stores within their region (read all, manage escalations)
+  - Corporate Operations: full read access across all stores and regions; access to analytics
+  - IT Administrator: full platform access including configuration
+Vendors must confirm that these roles (or equivalent) can be configured within the platform.
+
+REQ-04: Mobile Support
+Store managers do not have laptops at the point of work. The platform must be accessible from a smartphone or tablet. A native mobile application (iOS and/or Android) is preferred. A responsive web application may be considered if it provides equivalent functionality on mobile devices. Vendors must clearly specify what mobile capability is available and at what tier.
+
+REQ-05: SOC2 Compliance
+The platform must be SOC2 Type II certified. Vendors must provide the date of the most recent SOC2 audit and the name of the auditing firm. The full SOC2 report must be made available to Initech's information security team prior to contract signature (NDA acceptable).
+
+REQ-06: Support SLA — Response Time
+Initech requires a maximum 4-hour response SLA for critical issues (platform unavailable or core functionality degraded). SLA must apply during Initech's operational hours at minimum (Sunday–Thursday, 7am–10pm Gulf Standard Time). Vendors must specify their support tier that covers this SLA and the associated cost.
+
+REQ-07: Implementation Timeline
+The platform must be fully deployed, configured, and operational for all 200 stores by September 30, 2025. This is a hard deadline — Initech's Q4 peak season begins October 1 and no system changes can be made after September 30. Vendors must provide a week-by-week implementation plan demonstrating that the September 30 deadline is achievable from a contract signature date of no later than July 15, 2025. The plan must identify what resources Initech is required to provide and when.
+
+REQ-08: Training — Store Managers
+Initech requires training for approximately 200 store managers distributed across the Gulf region. Managers have varying levels of digital literacy. Training must be available in both English and Arabic. Vendors must specify the training format(s) available, whether on-site training can be arranged, and whether training materials are provided for internal use.
+
+REQ-09: API for Custom Integrations
+Initech's IT team requires API access to build custom integrations with internal reporting systems. The platform must provide a documented REST API. Vendors must specify: authentication method, rate limits, availability of an OpenAPI specification, and which platform tier includes API access.
+
+REQ-10: Reporting and Analytics
+The platform must provide analytics at the regional and corporate level, including: checklist completion rates by store and region, incident volume and resolution time trends, and on-time vs. late completion tracking. Reports must be viewable within the platform and exportable (PDF or Excel). Vendors must specify whether custom report building is supported.
+
+REQ-11: Vendor Support Responsiveness (Reference Check)
+Initech will contact references from at least two of the vendor's existing retail or multi-site operations customers. Vendors must provide reference contacts. References will be asked specifically about support responsiveness and implementation quality.
+
+REQ-12: Data Residency
+All Initech data must be stored within the Gulf Cooperation Council (GCC) region or, if GCC is not available, within the Middle East / North Africa (MENA) region. Vendors must specify available data residency regions. Vendors that can only offer data residency outside MENA must note this clearly — Initech may apply for an exception but it is not guaranteed.
+
+---
+
+EVALUATION CRITERIA
+
+Requirements will be weighted as follows:
+- REQ-07 (Implementation timeline): 25%
+- REQ-01 (Workflow automation): 20%
+- REQ-05 (SOC2): 15%
+- REQ-02 (SAP integration): 15%
+- REQ-03 (Access control): 10%
+- REQ-06 (Support SLA): 10%
+- REQ-04, REQ-08, REQ-09, REQ-10, REQ-11, REQ-12: remaining 5% (shared)
+
+Price will be evaluated separately following technical evaluation. Vendors whose technical response does not meet REQ-05, REQ-07, or REQ-02 will not proceed to commercial evaluation.
+
+---
+
+SUBMISSION INSTRUCTIONS
+
+- Submit responses as a PDF document to rfp@initech-retail.com
+- Subject line: "RFP Response — Store Operations Workflow Platform — [Vendor Name]"
+- Questions: submit written questions to rfp@initech-retail.com by May 15, 2025. A consolidated Q&A will be published by May 22, 2025.
+- Late submissions will not be considered.

@@ -1,0 +1,35 @@
+From: Priya Sharma <p.sharma@initech-retail.com>
+To: Sarah Chen <s.chen@meridiansystems.io>
+Date: April 22, 2025
+Subject: Initech Retail — RFP: Store Operations Workflow Platform
+
+Sarah,
+
+Please find attached the formal RFP for Initech Retail's Store Operations Workflow Platform project. Key details:
+
+- Response deadline: June 15, 2025
+- Evaluation period: June 16 – June 30
+- Decision and notification: July 1, 2025 (subject to internal approvals)
+
+The RFP contains 12 requirements. Please respond to each requirement individually. Unanswered requirements will be scored as "not met."
+
+Questions: submit written questions to rfp@initech-retail.com by May 15. We will publish a consolidated Q&A document by May 22.
+
+Please confirm receipt of this RFP.
+
+Priya Sharma
+Head of IT, Initech Retail
+
+---
+
+From: Sarah Chen <s.chen@meridiansystems.io>
+Date: April 22, 2025
+Subject: RE: Initech Retail — RFP: Store Operations Workflow Platform
+
+Priya,
+
+Confirmed — we've received the RFP. We'll respond to all 12 requirements by June 15.
+
+If it's appropriate, I'd also welcome the opportunity for a brief clarification call before the May 15 questions deadline — purely to make sure we interpret requirements correctly. Happy to keep it short (30 minutes).
+
+Sarah
